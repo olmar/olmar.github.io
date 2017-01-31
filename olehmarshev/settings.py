@@ -24,7 +24,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = 'nab(=u^hb_7(#7qj-)9(n)9%q-h+b6j2o)q28k!4$9)rq%9%^j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ['DEBUG']
+DEBUG = os.environ['DEBUG'] == 'True'
 
 ALLOWED_HOSTS = ['olehmarshev-dev.herokuapp.com']
 
