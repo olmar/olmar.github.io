@@ -1,4 +1,0 @@
-gunicorn==19.6.0
-Django==1.10.5
-psycopg2
-whitenoise
