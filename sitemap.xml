@@ -3,8 +3,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://olehmarshev.com/posts/my-first-post/</loc>
+    <loc>https://olehmarshev.com/blog/maintenance-and-development/</loc>
     <lastmod>2018-01-15T00:17:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://olehmarshev.com/blog/</loc>
+    <lastmod>2018-01-15T00:17:20+02:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -14,12 +20,6 @@
   
   <url>
     <loc>https://olehmarshev.com/</loc>
-    <lastmod>2018-01-15T00:17:20+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://olehmarshev.com/posts/</loc>
     <lastmod>2018-01-15T00:17:20+02:00</lastmod>
     <priority>0</priority>
   </url>
