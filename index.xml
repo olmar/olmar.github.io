@@ -5,19 +5,9 @@
     <link>https://olehmarshev.com/</link>
     <description>Recent content on Minimo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 15 Jan 2018 00:17:20 +0200</lastBuildDate>
     
 	<atom:link href="https://olehmarshev.com/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>My First Post</title>
-      <link>https://olehmarshev.com/posts/my-first-post/</link>
-      <pubDate>Mon, 15 Jan 2018 00:17:20 +0200</pubDate>
-      
-      <guid>https://olehmarshev.com/posts/my-first-post/</guid>
-      <description>Hello!</description>
-    </item>
     
   </channel>
 </rss>
