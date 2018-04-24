@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='In the first half of The Pragmatic Programmer Andrew Hunt and David Thomas introduce concept of Design by Contract (DBC, for short).1
+In order to determine correctness of the program three questions must be answered:
+ What does routine expect? What does routine guarantee? What does routine maintain?  For example, Python can support this via assert statements and invariant methods. But there is no native support in it as in Eiffel.'>
+
+<meta property='og:title' content='Unit Testing vs Design by Contract • Oleh Marshev'>
+<meta property='og:description' content='In the first half of The Pragmatic Programmer Andrew Hunt and David Thomas introduce concept of Design by Contract (DBC, for short).1
+In order to determine correctness of the program three questions must be answered:
+ What does routine expect? What does routine guarantee? What does routine maintain?  For example, Python can support this via assert statements and invariant methods. But there is no native support in it as in Eiffel.'>
+<meta property='og:url' content='https://olehmarshev.com/blog/unit-testing-vs-design-by-contract/'>
+<meta property='og:site_name' content='Oleh Marshev'>
+<meta property='og:type' content='article'><meta property='article:section' content='Blog'><meta property='article:published_time' content='2018-04-22T21:43:59&#43;03:00'/><meta property='article:modified_time' content='2018-04-22T21:43:59&#43;03:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.32.4" />
+
+  <title>Unit Testing vs Design by Contract • Oleh Marshev</title>
+  <link rel='canonical' href='https://olehmarshev.com/blog/unit-testing-vs-design-by-contract/'>
+  
+  
+  <link rel='icon' href='https://olehmarshev.com/favicon.ico'>
+<link rel='stylesheet' href='https://olehmarshev.com/assets/css/main.f0e8df71.css'>
+</head>
+
+
+<body class='page type-blog'>
+  <div class='site'>
+
+    <a class='screen-reader' href='#main'>Skip to Content</a>
+
+    <header id='header' class='header-container'>
+      <div class='header site-header'>
+        <nav id='main-menu' class='main-menu-container' aria-label='Main Menu'>
+  <ul class='main-menu'>
+  
+  </ul>
+</nav>
+
+        <div class='header-info'>
+          
+          <p class='site-title title'>Oleh Marshev</p>
+          
+          <p class='site-description subtitle'></p>
+        </div>
+      </div>
+    </header>
+
+
+<main id='main' class='main'>
+  <article lang='en' class='entry'>
+    <header class='header-container'>
+  <div class='header entry-header'>
+    <div class='header-info'>
+      <h1 class='title'>Unit Testing vs Design by Contract</h1>
+      
+
+    </div>
+    
+<div class='meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader'>Posted on </span>
+  <time class='date' datetime='2018-04-22T21:43:59&#43;03:00'>2018, Apr 22</time>
+</span>
+
+  
+  
+
+</div>
+
+
+  </div>
+</header>
+
+    
+    
+
+    <div class='entry-content'>
+  <p>In the first half of <a href="https://pragprog.com/book/tpp/the-pragmatic-programmer">The Pragmatic Programmer</a> Andrew Hunt and David Thomas introduce concept of Design by Contract (DBC, for short).<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup></p>
+
+<p>In order to determine correctness of the program three questions must be answered:</p>
+
+<ol>
+<li>What does routine expect?</li>
+<li>What does routine guarantee?</li>
+<li>What does routine maintain?</li>
+</ol>
+
+<p>For example, Python can support this via <a href="https://docs.python.org/3/reference/simple_stmts.html#assert"><code>assert</code></a> statements and <a href="https://en.wikipedia.org/wiki/Invariant_(computer_science)"><code>invariant</code></a> methods. But there is no native support in it as in Eiffel.</p>
+
+<p>In second half of the book the concept of Unit Testing is explained. Writing tests can ensure to a first approximation previous three questions.</p>
+
+<p>Let&rsquo;s imagine if just only one of this concepts is practiced. For example, a Design by Contract?</p>
+
+<p>For now I want to emphasize just two points:</p>
+
+<ul>
+<li>Bad customer experience. Assertions and invariants tends to be happen not in development environment but somewhere next in continuous delivery pipeline.</li>
+<li>From technical perspective refactoring is hardly possible. Getting feedback about changes made to the system tends to be happen not in development environment also.</li>
+</ul>
+
+<p>On the contrary, I want to know about how changes affect system in the Work-In-Progress stage.</p>
+
+<p>I think these both concepts - Unit Testing and DBC - should complement each other. Unit testing should be practiced and implemented in tests. DBC should be practiced and implemented as a mental model. Something that engineer should always have in the background during his work.</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">Design by Contract was developed by Bertrand Meyer in 1986 when he was working on Eiffel programming language.
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+</div>
+
+    
+<footer class='entry-footer-container'>
+  <div class='entry-footer'>
+  
+  </div>
+</footer>
+
+
+  </article>
+  
+<nav class='entry-nav-container'>
+  <div class='entry-nav'><div class='prev-entry'>
+      <a href='https://olehmarshev.com/blog/maintenance-and-development/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader'>Previous post: </span>Maintenance and Development</a>
+    </div></div>
+</nav>
+
+  
+</main>
+
+    <footer id='footer' class='footer-container'>
+      <div class='footer'>
+        <div class='social-menu-container'>
+  <nav aria-label='Social Menu'>
+    <ul class='social-menu'></ul>
+  </nav>
+</div>
+        <div class='copyright'>
+  <p>Copyright © 2018
+  </p>
+</div>
+
+      </div>
+    </footer>
+
+  </div><script src='https://olehmarshev.com/assets/js/main.5871befd.js'></script></body>
+
+</html>
+
