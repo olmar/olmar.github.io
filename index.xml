@@ -5,15 +5,24 @@
     <link>https://olehmarshev.com/</link>
     <description>Recent content on Oleh Marshev</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright © 2018</copyright>
-    <lastBuildDate>Mon, 15 Jan 2018 00:17:20 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 22 Apr 2018 21:43:59 +0300</lastBuildDate>
     
 	<atom:link href="https://olehmarshev.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Maintenance and development</title>
+      <title>Unit Testing vs Design by Contract</title>
+      <link>https://olehmarshev.com/blog/unit-testing-vs-design-by-contract-/</link>
+      <pubDate>Sun, 22 Apr 2018 21:43:59 +0300</pubDate>
+      
+      <guid>https://olehmarshev.com/blog/unit-testing-vs-design-by-contract-/</guid>
+      <description>In the first half of The Pragmatic Programmer Andrew Hunt and David Thomas introduce concept of Design by Contract (DBC, for short).1
+In order to determine correctness of the program three questions must be answered:
+ What does routine expect? What does routine guarantee? What does routine maintain?  For example, Python can support this via assert statements and invariant methods. But there is no native support in it as in Eiffel.</description>
+    </item>
+    
+    <item>
+      <title>Maintenance and Development</title>
       <link>https://olehmarshev.com/blog/maintenance-and-development/</link>
       <pubDate>Mon, 15 Jan 2018 00:17:20 +0200</pubDate>
       
