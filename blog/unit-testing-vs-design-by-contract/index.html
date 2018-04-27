@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="map[]" />
+    <meta name="description" content="Hello">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <title>Unit Testing vs Design by Contract</title>
+    <meta name="generator" content="Hugo 0.40.1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old" />
+    
+    <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+    
+  </head>
+
+  <body>
+    <div id="wrap">
+
+      
+      <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href=""><i class="fa fa-home"></i></a>
+    </div>
+    <div id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+        <li><a href="/about/">ABOUT</a></li>
+        
+      
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      
+      <div class="container">
+        <div class="blog-post">
+          <h3>
+            <strong><a href="/blog/unit-testing-vs-design-by-contract/">Unit Testing vs Design by Contract</a></strong>
+          </h3>
+        </div>
+        <div class="blog-title">
+          <h4>
+          April 22, 2018
+            &nbsp;&nbsp;
+            
+          </h4>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="blogpost">
+              <p>In the first half of <a href="https://pragprog.com/book/tpp/the-pragmatic-programmer">The Pragmatic Programmer</a> Andrew Hunt and David Thomas introduce concept of Design by Contract (DBC, for short).<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup></p>
+
+<p>In order to determine correctness of the program three questions must be answered:</p>
+
+<ol>
+<li>What does routine expect?</li>
+<li>What does routine guarantee?</li>
+<li>What does routine maintain?</li>
+</ol>
+
+<p>For example, Python can support this via <a href="https://docs.python.org/3/reference/simple_stmts.html#assert"><code>assert</code></a> statements and <a href="https://en.wikipedia.org/wiki/Invariant_(computer_science)"><code>invariant</code></a> methods. But there is no native support in it as in Eiffel.</p>
+
+<p>In second half of the book the concept of Unit Testing is explained. Writing tests can ensure to a first approximation previous three questions.</p>
+
+<p>Let&rsquo;s imagine if just only one of this concepts is practiced. For example, a Design by Contract?</p>
+
+<p>For now I want to emphasize just two points:</p>
+
+<ul>
+<li>Bad customer experience. Assertions and invariants tends to be happen not in development environment but somewhere next in continuous delivery pipeline.</li>
+<li>From technical perspective refactoring is hardly possible. Getting feedback about changes made to the system tends to be happen not in development environment also.</li>
+</ul>
+
+<p>On the contrary, I want to know about how changes affect system in the Work-In-Progress stage.</p>
+
+<p>I think these both concepts - Unit Testing and DBC - should complement each other. Unit testing should be practiced and implemented in tests. DBC should be practiced and implemented as a mental model. Something that engineer should always have in the background during his work.</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">Design by Contract was developed by Bertrand Meyer in 1986 when he was working on Eiffel programming language.
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+              <hr>
+              <div class="related-posts">
+                <h5>Related Posts</h5>
+                
+              </div>
+            </div>
+          </div>
+          <hr>
+        <div class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+
+    (function() {
+      
+      
+      if (window.location.hostname == "localhost")
+        return;
+
+      var disqus_shortname = '';
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+        </div>
+      </div>
+      
+    </div>
+
+    
+    <footer>
+  <div id="footer">
+    <div class="container">
+      <p class="text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io/">Hugo</a> and
+      <a href="http://www.github.com/nurlansu/hugo-sustain/">sustain</a> with ♥</p>
+    </div>
+  </div>
+</footer>
+<div class="footer"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/docs.min.js"></script>
+<script src="js/main.js"></script>
+
+<script src="js/ie10-viewport-bug-workaround.js"></script>
+
+
+    
+  </body>
+</html>
